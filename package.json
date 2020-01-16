@@ -8,6 +8,9 @@
     "eject": "cgb-scripts eject"
   },
   "dependencies": {
+    "@wordpress/block-editor": "^3.5.0",
+    "@wordpress/blocks": "^6.10.0",
+    "@wordpress/components": "^9.0.0",
     "cgb-scripts": "1.22.0"
   }
 }
