@@ -26,6 +26,12 @@ registerBlockType( 'wcpt/block-west-coast-block-new-test', {
 		__( 'CGB Example' ),
 		__( 'create-guten-block' ),
 	],
-	edit: CardEdit,
+	edit: (props)=>{
+    return (
+      <div>
+        hi
+      </div>
+    )
+  },
 	save: CardSave,
 });
