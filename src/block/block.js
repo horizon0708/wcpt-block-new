@@ -8,6 +8,7 @@
 //  Import CSS.
 import './editor.scss';
 import './style.scss';
+import { CardEdit } from '../card/edit';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
@@ -27,7 +28,7 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
  */
 registerBlockType( 'cgb/block-west-coast-block-new', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'west-coast-block-new - CGB Block' ), // Block title.
+	title: __( 'west-coast-block-new - CGB Block t' ), // Block title.
 	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
@@ -47,25 +48,26 @@ registerBlockType( 'cgb/block-west-coast-block-new', {
 	 * @param {Object} props Props.
 	 * @returns {Mixed} JSX Component.
 	 */
-	edit: ( props ) => {
-		// Creates a <p class='wp-block-cgb-block-west-coast-block-new'></p>.
-		return (
-			<div className={ props.className }>
-				<p>— Hello from the backend.</p>
-				<p>
-					CGB BLOCK: <code>west-coast-block-new</code> is a new Gutenberg block
-				</p>
-				<p>
-					It was created via{ ' ' }
-					<code>
-						<a href="https://github.com/ahmadawais/create-guten-block">
-							create-guten-block
-						</a>
-					</code>.
-				</p>
-			</div>
-		);
-	},
+	edit: CardEdit
+	// edit: ( props ) => {
+	// 	// Creates a <p class='wp-block-cgb-block-west-coast-block-new'></p>.
+	// 	return (
+	// 		<div className={ props.className }>
+	// 			<p>— Hello from the backend.</p>
+	// 			<p>
+	// 				CGB BLOCK: <code>west-coast-block-new</code> is a new Gutenberg block
+	// 			</p>
+	// 			<p>
+	// 				It was created via{ ' ' }
+	// 				<code>
+	// 					<a href="https://github.com/ahmadawais/create-guten-block">
+	// 						create-guten-block
+	// 					</a>
+	// 				</code>.
+	// 			</p>
+	// 		</div>
+	// 	);
+	// },
 
 	/**
 	 * The save function defines the way in which the different attributes should be combined
