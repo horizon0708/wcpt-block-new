@@ -18,7 +18,9 @@ export const CardEdit = ({ className, attributes, setAttributes }) => {
 	);
 };
 
-export const CardSave = ({ className, title, subtitle, content }) => {
+export const CardSave = ({ className, attributes }) => {
+	console.log(attributes);
+	const { title, subtitle, content } = attributes;
 	return (
 		<div className={className}>
 			<div className="card">
