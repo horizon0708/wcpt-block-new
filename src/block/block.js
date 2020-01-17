@@ -48,7 +48,7 @@ registerBlockType( 'cgb/block-west-coast-block-new', {
 	 * @param {Object} props Props.
 	 * @returns {Mixed} JSX Component.
 	 */
-	edit: CardEdit
+	edit: CardEdit,
 	// edit: ( props ) => {
 	// 	// Creates a <p class='wp-block-cgb-block-west-coast-block-new'></p>.
 	// 	return (
