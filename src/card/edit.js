@@ -13,7 +13,7 @@ export const CardEdit = ({ className, attributes, setAttributes }) => {
 		<div className={className}>
 			<TextControl label="Card Title" value={title} onChange={onChange('title')} />
 			<TextControl label="Card Subtitle" value={subtitle} onChange={onChange('subtitle')} />
-			<RichText tagName="p" value={content} onChange={onChange('content')} />
+			<RichText tagName="h2" value={content} onChange={onChange('content')} />
 		</div>
 	);
 };
@@ -26,15 +26,13 @@ export const CardSave = ({ className, attributes, ...props }) => {
 		<div className={className}>
 			<div className="card">
 				<div className="card-body">
-					{title &&
 						<h5 className="card-title">
-							{title}
-						</h5>}
-					{subtitle &&
+							{title}{props}hi
+						</h5>
 						<h6 className="card-subtitle mb-2 text-muted">
 							{subtitle}
-						</h6>}
-					<RichText.Content tagName="p" value={content} />
+						</h6>
+					<RichText.Content tagName="h2" value={content} />
 				</div>
 			</div>
 		</div>
