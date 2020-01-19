@@ -18,15 +18,20 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
  */
 registerBlockType('wcpt/block-west-coast-block-new-test', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __('west-coast-block-new - Test Block'), // Block title.
+	title: __('wcpt - card block'), // Block title.
 	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
-	keywords: [__('west-coast-block-new — CGB Block'), __('CGB Example'), __('create-guten-block')],
+	keywords: [__('wcpt')],
 	attributes: {
-		content: {
+		title: {
 			type: 'string',
 			source: 'html',
-			selector: 'h2'
+			selector: '.card-title'
+		},
+		subtitle: {
+			type: 'string',
+			source: 'html',
+			selector: '.card-subtitle'
 		}
 	},
 	edit: CardEdit,

@@ -11,3 +11,4 @@
 
 import './block/block.js';
 import './card/index.js'
+import './adopt/index.js'
